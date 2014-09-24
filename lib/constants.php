@@ -10,12 +10,12 @@ if (count($url)==1){
 }
 
 define('IMAGE', ROOT . DIRECTORY_SEPARATOR . 'img/');
-
+/**
 var_dump('__FILE__: '.__FILE__);
 var_dump('basename ROOT: '.$dir);
 var_dump('ROOT: '.ROOT);
 var_dump('WEBROOT: '.WEBROOT);
 var_dump('IMAGE: '.IMAGE);
-
+**/
 
 //define('WEBROOT', dirname($_SERVER['SCRIPT_NAME']).'/');

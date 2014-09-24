@@ -1,0 +1,56 @@
+@CHARSET "UTF-8";
+body {
+	background-color: #eee;
+}
+.sign {
+/*     background-color: #eee; */
+    padding-bottom: 40px;
+    padding-top: 40px;
+}
+
+.blck{
+	background: #ffffff;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+	border: 0 none;
+    box-sizing: border-box;
+    margin-top: 5px;
+    padding: 10px;
+}
+
+.blck.form-signin{
+	margin-top: 40px;
+}
+
+.blck .thumbnail {
+	padding: 0px;
+}
+.heads {
+	background: #258dc8; /* Old browsers */
+background: -moz-linear-gradient(top, #258dc8 0%, #258dc8 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#258dc8), color-stop(100%,#258dc8)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #258dc8 0%,#258dc8 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, #258dc8 0%,#258dc8 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, #258dc8 0%,#258dc8 100%); /* IE10+ */
+background: linear-gradient(to bottom, #258dc8 0%,#258dc8 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#258dc8', endColorstr='#258dc8',GradientType=0 ); /* IE6-9 */
+color: #fff;
+}
+
+.form-signin {
+    margin: 0 auto;
+    max-width: 330px;
+    padding: 15px;
+}
+
+.skills{
+	    background-color: #f0f0f0;
+    border-bottom: 1px solid #ddd;
+    border-radius: 3px;
+    border-right: 1px solid #ddd;
+    padding: 0 13px;
+    color: #000;
+}
+a:focus, a:hover{
+	color: none;
+	text-decoration: none;
+}

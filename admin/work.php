@@ -1,5 +1,6 @@
 <?php
 include '../lib/includes.php';
+include '../lib/auth.php';
 include '../partials/admin_header.php';
 include '../partials/admin_nav.php';
 
@@ -48,4 +49,4 @@ $count = 0;
     </table>
 </html>
 
-<?php include '../partials/footer.php';include '../lib/debug.php';?>
+<?php include '../partials/footer.php';

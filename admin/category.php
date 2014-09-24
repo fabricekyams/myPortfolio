@@ -1,5 +1,6 @@
 <?php
 include '../lib/includes.php';
+include '../lib/auth.php';
 include '../partials/admin_header.php';
 include '../partials/admin_nav.php';
 
@@ -18,6 +19,7 @@ $cats = $query->fetchAll();
 $count = 0;
 ?>
 <html>
+<div class="row blck">
 <h1>Les Catégories</h1>
 <?= WEBROOT?>
 <table class="table">
@@ -46,6 +48,7 @@ $count = 0;
        </tr>
       </tbody>
     </table>
+    </div>
 </html>
 
-<?php include '../partials/footer.php';include '../lib/debug.php';?>
+<?php include '../partials/footer.php';

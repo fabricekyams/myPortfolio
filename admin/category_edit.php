@@ -1,6 +1,6 @@
 <?php
 include '../lib/includes.php';
-
+include '../lib/auth.php';
 /**
  * Verification du Post
  */
@@ -65,4 +65,3 @@ include '../partials/admin_nav.php';
 </html>
 
 <?php include '../partials/footer.php';
-include '../lib/debug.php';?>

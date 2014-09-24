@@ -1,5 +1,6 @@
 <?php
 include '../lib/includes.php';
+include '../lib/auth.php';
 
 /**
  * Verification du Post
@@ -99,6 +100,15 @@ if (isset($_GET['del_image'])){
 	die();
 
 }
+if (isset($_GET['highlight_img'])){
+	checkCsrf();
+	$id = $db->quote($_GET['highlight_img']);
+	$workid = ($_GET['id']);
+	$db->query("UPDATE works SET img_id = $id WHERE id = $workid");
+	header('Location:work_edit.php?id='.$workid.'&'.csrf());
+	die();
+
+}
 
 $selects = $db->query("SELECT id, name FROM categories ORDER BY name ASC")->fetchAll();
 $cats = array();
@@ -144,9 +154,27 @@ include '../partials/admin_nav.php';
 		</form>
 	</div>
 	<div class="col-md-4">
+	<div class="row">
 		<?php foreach ($imgs as $img):?>
-			<a href="?del_image=<?= $img['id']?>&<?=csrf()?>&imgname=<?=$img['name']?>" onclick="return confirm('DELETE: SUR?')"><img src="<?= WEBROOT;?>img/works/<?=$img['name']?>" alt="" class="img-thumbnail" /></a>	
+		
+		  <div class="col-md-6">
+		    <div class="thumbnail">
+		      <img src="<?= WEBROOT;?>img/works/<?=$img['name']?>" alt="" >
+		      <div class="caption">
+		        <p>
+		        <a href="?del_image=<?= $img['id']?>&<?=csrf()?>&imgname=<?=$img['name']?>" onclick="return confirm('DELETE: SUR?')"  class="btn btn-default">
+		        	<span class="glyphicon glyphicon-trash"></span>
+		        </a> 
+		        <a href="?highlight_img=<?=$img['id'];?>&id=<?=$_GET['id']?>&<?=csrf();?>" class="btn btn-default" role="button">
+		        	<span class="glyphicon glyphicon-star"></span>
+		        </a></p>
+		      </div>
+		    </div>
+		  </div>
+		
+				
 		<?php endforeach;?>
+		</div>
 	</div>
 </div>
 
@@ -191,4 +219,3 @@ tinymce.init({
 
 
 <?php include '../partials/footer.php';
-include '../lib/debug.php';?>

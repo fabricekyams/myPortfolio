@@ -1,14 +1,12 @@
 <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
 
-	<div class="container-fluid">
-	<div class="collapse navbar-collapse">
+	<div class="container-fluid "><div class="navbar-header">
+          <a href="#" class="navbar-brand">MY PORTFOLIO</a>
+        </div>
+	<div class="collapse navbar-collapse container">
 	<ul class="nav navbar-nav">
-	<li class="active"><a href="">Acceuil</a></li>
-	<li><a href="">About me</a></li>
-	<li><a href="">Motivation</a></li>
-	<li><a href="">Qualifications</a></li>
-	<li><a href="">Experience</a></li>
-	<li><a href="">Portfolio</a></li>
+	<li><a href="aboutme.php">About me</a></li>
+	<li><a href="index.php">Portfolio</a></li>
 	</ul>
 	
 	</div>
