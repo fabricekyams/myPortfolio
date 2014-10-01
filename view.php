@@ -27,11 +27,12 @@ if (isset($_GET['id'])){
  <html>
  
  <div class=" row blck head">
+ <div class="col-md-11">
  <h2 class=""><?=$works['name']?></h2>
  
  <p> <?=$works['content']?></p>
  <span class="skills" ><?=$works['catname']; ?></span>
- </div>
+ 
  
  <?php foreach ($imgs as $img):?>
  <div class=" blck row">
@@ -49,9 +50,12 @@ if (isset($_GET['id'])){
  	</div>
  	
  	</div>
+ 	
  	</div>
- 	<?php endforeach;?>
- 
+ <?php endforeach;?>	
+ </div>
+  
+ </div>
  
  </html>
 
